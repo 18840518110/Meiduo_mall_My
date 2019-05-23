@@ -16,8 +16,10 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
+from apps.user import views
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    # users
-    url(r'^', include('apps.users.urls', namespace='users')),
+    # 注册
+    url(r'^register/$', views.RegisterView.as_view(), name='register'),
 ]
