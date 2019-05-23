@@ -1,0 +1,4 @@
+INFO 2019-05-23 15:57:11,781 testlog 4 测试logging模块info
+ERROR 2019-05-23 15:57:11,781 testlog 5 测试logging模块error
+INFO 2019-05-23 15:58:10,801 testlog 5 测试logging模块info
+ERROR 2019-05-23 15:58:10,801 testlog 6 测试logging模块error
