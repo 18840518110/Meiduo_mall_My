@@ -1,0 +1,24 @@
+1.apps 存放Django的子应用
+
+2.libs 存放第三方的库文件
+
+3.logs 日志文件
+
+4.static 静态文件存放文件夹
+
+5.templates 模板文件存放文件夹
+
+6.utils 工具类存放项目自己定义的公共函数或类等
+
+1.新建MySQL数据库：meiduo
+
+$ create database meiduo charset=utf8;
+2.新建MySQL用户
+
+$ create user itheima identified by '123456';
+3.授权itheima用户访问meiduo数据库
+
+$ grant all on meiduo.* to 'itheima'@'%';
+4.授权结束后刷新特权
+
+$ flush privileges;
