@@ -214,3 +214,4 @@ logger = logging.getLogger('django')
 logger.debug('测试logging模块debug')
 logger.info('测试logging模块info')
 logger.error('测试logging模块error')
+aaaa
