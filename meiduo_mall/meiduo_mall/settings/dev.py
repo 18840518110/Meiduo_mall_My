@@ -14,7 +14,8 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
+print(BASE_DIR)
+print(os.path.abspath(__file__))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -25,7 +26,8 @@ SECRET_KEY = 'rg$d!v*n2ly6zz+%xx8q!p7+a&tur0&6w^t@d*y!-^wd=c9m*5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# 配置本地域名
+ALLOWED_HOSTS = ['www.meiduo.site']
 
 
 # Application definition
@@ -73,6 +75,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.jinja2.Jinja2',  # 1.jinja2模板引擎
         'DIRS': [os.path.join(BASE_DIR, 'templates')], # 2.模本文件夹路径
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -143,8 +146,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+# 静态文件配置
 STATIC_URL = '/static/'
-
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
 # 配置redis数据库
@@ -211,6 +215,3 @@ LOGGING = {
 # 实例化日志对象
 import logging
 logger = logging.getLogger('django')
-logger.debug('测试logging模块debug')
-logger.info('测试logging模块info')
-logger.error('测试logging模块error')
